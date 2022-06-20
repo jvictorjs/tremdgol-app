@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "TremdGol Free",
+    "slug": "tremdgol_free",
+    "version": "1.10.3",
+    "orientation": "portrait",
+    "icon": "./assets/icon_tremdgol.png",
+    "splash": {
+      "image": "./assets/splash_tremdgol.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ECECEC"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/playstore_app_icon2.png",
+        "backgroundColor": "#ECECEC"
+      },
+      "package": "com.bolanarede.tremdgol_free",
+      "permissions": [],
+      "versionCode": 52
+    },
+    "web": {
+      "favicon": "./assets/icon_tremdgol.png"
+    }
+  }
+}
