@@ -12,14 +12,14 @@ export default StyleSheet.create({
     AboutModalView: {
         flex: 1,
         flexGrow: 0,
-        marginTop: Constants.statusBarHeight + 108,
+        marginTop: Constants.statusBarHeight + 150,
         paddingVertical: 8,
         alignSelf: 'center',
         backgroundColor: "#efefef",
         borderRadius: 15,
         alignItems: "center",
         elevation: 30,
-        flexBasis: 500,
+        flexBasis: 465,
         width: '100%'
     },
 

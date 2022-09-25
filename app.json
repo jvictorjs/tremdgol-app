@@ -2,7 +2,7 @@
   "expo": {
     "name": "TremdGol Free",
     "slug": "tremdgol_free",
-    "version": "1.10.3",
+    "version": "1.10.4",
     "orientation": "portrait",
     "icon": "./assets/icon_tremdgol.png",
     "splash": {
@@ -26,7 +26,7 @@
       },
       "package": "com.bolanarede.tremdgol_free",
       "permissions": [],
-      "versionCode": 52
+      "versionCode": 53
     },
     "web": {
       "favicon": "./assets/icon_tremdgol.png"

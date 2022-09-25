@@ -92,17 +92,17 @@ const AboutModal = (props) => {
                 >
                     <View style={styles.modalContainer}>
                         <View style={styles.AboutModalView}>
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderWidth: 0, width: '100%' }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderWidth: 0, width: '100%', marginTop:8}}>
                                 <Text style={{ color: '#FCFCFC' }}></Text>
                                 <Text style={[{ fontWeight: 'bold', textAlign: 'center', color: '#737380', fontSize: 16, borderWidth: 0, borderRadius: 6 }]}>
-                                    About the TremdGol Free app
+                                    TremdGol App
                                 </Text>
                                 <Pressable onPress={() => { toggleModal() }} style={{ alignSelf: 'flex-end', marginRight: 10, marginBottom: 13, borderWidth: 0 }}>
                                     <FontAwesome name="close" size={25} color="#777"></FontAwesome>
                                 </Pressable>
                             </View>
-                            <Divider width={2} style={{ color: '#666', backgroundColorcolor: '#666', borderColor: '#666', borderWidth: 0, width: '96%', marginBottom: 13, height: 2, marginTop: -5 }} />
-                            <View style={{ flexDirection: 'column', justifyContent: 'space-between', marginTop: 0, borderWidth: 0, height: 386, borderRadius: 0, width: '100%' }}>
+                            
+                            <View style={{ flexDirection: 'column', justifyContent: 'space-between', marginTop: 0, borderWidth: 0, height: 350, borderRadius: 0, width: '100%' }}>
                                 <SafeAreaView style={styles.container}>
                                     <ScrollView style={styles.scrollView}>
                                         {/*
@@ -111,33 +111,43 @@ const AboutModal = (props) => {
                                         </Text>
                                         
                                         */}
-                                        <View style={[{ fontSize: 12, width: '100%', borderWidth: 0, alignItems: 'center', alignSelf: 'center', marginBottom: 42 }]}>
+                                        <View style={[{ fontSize: 12, width: '100%', borderWidth: 0, alignItems: 'center', alignSelf: 'center', marginBottom: 13 }]}>
                                             <View>
                                                 <Text style={[{ fontWeight: 'bold', textAlign: 'left', color: '#737380', fontSize: 16, borderWidth: 0, borderRadius: 6 }]}>
                                                     ⚽ Forever free{'\n'}
                                                     ⚽ Live soccer matches stats{'\n'}
                                                     ⚽ The main leagues of the world{'\n'}
+                                                    ⚽ Recent last matches history{'\n'}
                                                     {'\n'}Coming up soon...{'\n'}
-                                                    ⚽ More soccer predictions{'\n'}
-                                                    ⚽ More events data: recent history and stats{'\n\n'}
-                                                    Keep your app up to date to see new features{'\n\n'}
-                                                    Join the Telegram channel for more:{'\n\n'}@tremdgol_tips</Text>
-
+                                                    ⚽ More soccer predictions{'\n\n'}
+                                                    Keep your app up to date to see new features.{'\n\n'}
+                                                    Join the Telegram channel for more:{'\n'}@tremdgol_tips{'\n\n'}
+                                                    Try the web version: tremdgol.com
+                                                </Text>
                                             </View>
                                         </View>
                                     </ScrollView>
                                 </SafeAreaView>
                             </View>
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '90%' }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', width: '100%', borderWidth:0, paddingTop:13}}>
                                 <Pressable onPress={() => Linking.openURL('https://t.me/tremdgol_tips')} style={{
-                                    marginLeft: 13, borderWidth: 0, backgroundColor: '#fff', alignSelf: 'flex-end',
-                                    borderRadius: 6, elevation: 5, marginHorizontal: 16, marginTop: 10, flexDirection: 'row', justifyContent: 'space-between'
+                                    borderWidth: 0, backgroundColor: '#fff', alignSelf: 'flex-end',
+                                    borderRadius: 6, elevation: 5, flexDirection: 'row', justifyContent: 'space-between'
                                 }}>
                                     <View style={{ flexDirection: 'row', borderWidth: 0, justifyContent: 'flex-end', marginBottom: 5 }}>
-                                        <Text style={{ fontSize: 16, lineHeight: 24, color: '#737380', fontWeight: 'bold', paddingLeft: 10, alignSelf: 'flex-end' }}>@tremdgol_tips</Text>
-                                        <FontAwesome name="telegram" size={23} style={{ marginTop: 4, marginHorizontal: 8 }} color="#737380" />
+                                        <FontAwesome name="telegram" size={23} style={{ marginTop: 4, marginHorizontal: 6 }} color="#737380" />
+                                        <Text style={{ fontSize: 15, lineHeight: 24, color: '#737380', fontWeight: 'bold', paddingLeft: 0, paddingRight: 5, alignSelf: 'flex-end' }}>@tremdgol_tips</Text>
                                     </View>
                                 </Pressable>
+                                <Pressable onPress={() => Linking.openURL('https://tremdgol.com')} style={{
+                                    borderWidth: 0, backgroundColor: '#fff', alignSelf: 'flex-end',
+                                    borderRadius: 6, elevation: 5, flexDirection: 'row', justifyContent: 'space-between'
+                                }}>
+                                    <View style={{ flexDirection: 'row', borderWidth: 0, justifyContent: 'flex-end', marginBottom: 5 }}>
+                                        <Text style={{ fontSize: 15, lineHeight: 24, color: '#737380', fontWeight: 'bold', paddingHorizontal:5, alignSelf: 'flex-end' }}>tremdgol.com</Text>
+                                    </View>
+                                </Pressable>
+                                {/*
                                 <Pressable onPress={() => toggleModal()} style={{
                                     marginLeft: 13, borderWidth: 0, backgroundColor: '#fff', alignSelf: 'flex-end',
                                     borderRadius: 6, elevation: 5, marginHorizontal: 16, marginTop: 10, flexDirection: 'row', justifyContent: 'space-between'
@@ -147,6 +157,7 @@ const AboutModal = (props) => {
                                         <Text style={{ fontSize: 16, lineHeight: 24, color: '#737380', fontWeight: 'bold', paddingRight: 10, alignSelf: 'flex-end' }}>Close</Text>
                                     </View>
                                 </Pressable>
+                                */}
                             </View>
                         </View>
                     </View>

@@ -237,7 +237,7 @@ const EventTipsModal = (props) => {
                 >
                     <View style={styles.modalContainer}>
                         <View style={styles.EventTipsModalView}>
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderWidth: 0, width: '100%' }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderWidth: 0, width: '100%', marginTop:7 }}>
                                 <Text style={{ color: '#FCFCFC' }}></Text>
                                 <Text style={[{ fontWeight: 'bold', textAlign: 'center', color: '#737380', fontSize: 16, borderWidth: 0, borderRadius: 6 }]}>
                                     Match Predictions
@@ -246,7 +246,9 @@ const EventTipsModal = (props) => {
                                     <FontAwesome name="close" size={25} color="#777"></FontAwesome>
                                 </Pressable>
                             </View>
+                            {/* 
                             <Divider width={2} style={{ color: '#666', backgroundColorcolor: '#666', borderColor: '#666', borderWidth: 0, width: '96%', marginBottom: 13, height: 2, marginTop: -5 }} />
+                            */}
                             <View style={{ flexDirection: 'column', justifyContent: 'space-between', marginTop: 0, borderWidth: 0, height: 386, borderRadius: 0, width: '100%' }}>
                                 <SafeAreaView style={styles.container}>
                                     <ScrollView style={styles.scrollView}>
@@ -264,10 +266,10 @@ const EventTipsModal = (props) => {
                                     </ScrollView>
                                 </SafeAreaView>
                             </View>
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '90%' }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '100%', borderWidth:0, marginTop:13 }}>
                                 <Pressable onPress={() => Linking.openURL('https://t.me/tremdgol_tips')} style={{
-                                    marginLeft: 13, borderWidth: 0, backgroundColor: '#fff', alignSelf: 'flex-end',
-                                    borderRadius: 6, elevation: 5, marginHorizontal: 16, marginTop: 10, flexDirection: 'row', justifyContent: 'space-between'
+                                    borderWidth: 0, backgroundColor: '#fff', alignSelf: 'flex-end',
+                                    borderRadius: 6, elevation: 5, flexDirection: 'row', justifyContent: 'space-between'
                                 }}>
                                     <View style={{ flexDirection: 'row', borderWidth: 0, justifyContent: 'flex-end', marginBottom: 5 }}>
                                         <Text style={{ fontSize: 16, lineHeight: 24, color: '#737380', fontWeight: 'bold', paddingLeft: 10, alignSelf: 'flex-end' }}>@tremdgol_tips</Text>
@@ -275,8 +277,8 @@ const EventTipsModal = (props) => {
                                     </View>
                                 </Pressable>
                                 <Pressable onPress={() => toggleModal()} style={{
-                                    marginLeft: 13, borderWidth: 0, backgroundColor: '#fff', alignSelf: 'flex-end',
-                                    borderRadius: 6, elevation: 5, marginHorizontal: 16, marginTop: 10, flexDirection: 'row', justifyContent: 'space-between'
+                                    borderWidth: 0, backgroundColor: '#fff', alignSelf: 'flex-end',
+                                    borderRadius: 6, elevation: 5, flexDirection: 'row', justifyContent: 'space-between'
                                 }}>
                                     <View style={{ flexDirection: 'row', borderWidth: 0, justifyContent: 'flex-end', marginBottom: 5 }}>
                                         <MaterialCommunityIcons name="close-thick" size={23} style={{ marginTop: 4, marginHorizontal: 4 }} color="#737380" />

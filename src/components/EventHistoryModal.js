@@ -395,7 +395,7 @@ const EventHistoryModal = (props) => {
                 >
                     <View style={styles.modalContainer}>
                         <View style={styles.EventHistoryModalView}>
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderWidth: 0, width: '100%' }}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderWidth: 0, width: '100%', marginTop:7 }}>
                                 <Text style={{ color: '#FCFCFC' }}></Text>
                                 <Text style={[{ fontWeight: 'bold', textAlign: 'center', color: '#737380', fontSize: 16, borderWidth: 0, borderRadius: 6 }]}>
                                     Event History
@@ -404,7 +404,9 @@ const EventHistoryModal = (props) => {
                                     <FontAwesome name="close" size={25} color="#777"></FontAwesome>
                                 </Pressable>
                             </View>
+                            {/* 
                             <Divider width={2} style={{ color: '#666', backgroundColorcolor: '#666', borderColor: '#666', borderWidth: 0, width: '96%', marginBottom: 13, height: 5, marginTop: -5 }} />
+                            */}
                             <View style={{ flexDirection: 'column', justifyContent: 'space-between', marginTop: 0, borderWidth: 0, height: '86%', borderRadius: 0, width: '100%' }}>
                                 <SafeAreaView style={styles.container}>
                                     <ScrollView style={styles.scrollView}>
@@ -424,7 +426,7 @@ const EventHistoryModal = (props) => {
                                     </ScrollView>
                                 </SafeAreaView>
                             </View>
-                            <Pressable onPress={() => toggleModal()} style={{ marginLeft: 13, borderWidth: 0, backgroundColor: '#fff', alignSelf: 'flex-end', borderRadius: 6, elevation: 5, marginHorizontal: 16, marginTop: 10 }}>
+                            <Pressable onPress={() => toggleModal()} style={{ marginLeft: 13, borderWidth: 0, backgroundColor: '#fff', alignSelf: 'flex-end', borderRadius: 6, elevation: 5, marginHorizontal: 16, marginTop: 15 }}>
                                 <View style={{ flexDirection: 'row', borderWidth: 0, justifyContent: 'flex-end', marginBottom: 5 }}>
                                     <MaterialCommunityIcons name="close-thick" size={23} style={{ marginTop: 4, marginHorizontal: 4 }} color="#737380" />
                                     <Text style={{ fontSize: 16, lineHeight: 24, color: '#737380', fontWeight: 'bold', paddingRight: 10, alignSelf: 'flex-end' }}>Close</Text>

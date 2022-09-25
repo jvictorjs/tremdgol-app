@@ -292,23 +292,33 @@ export default function App() {
         {upComingEvents && upComingEvents.length
           ?
         */}
-        <View style={{ flexDirection: 'row', borderWidth: 0, justifyContent: 'space-around', paddingHorizontal: 3, }}>
-          <Pressable onPress={() => {setUpComingEventsTypeEndedOrNotStarted('ended');setUpComingEventsModalVisible(!upComingEventsModalVisible)}} style={{ borderWidth: 0, backgroundColor: '#fff', alignSelf: 'flex-end', borderRadius: 6, elevation: 5, marginTop: 5, marginBottom: 5, padding: 3, marginHorizontal: 10 }}>
-            <View style={{ flexDirection: 'row', borderWidth: 0, justifyContent: 'flex-end' }}>
-              <MaterialCommunityIcons name="calendar-check" size={18} style={{ marginTop: 4, marginHorizontal: 3 }} color="#737380" />
-              <Text style={{ fontSize: 14, lineHeight: 24, color: '#737380', fontWeight: 'bold', paddingRight: 6, alignSelf: 'flex-end' }}> 
-              Ended Events
-              </Text>
-            </View>
-          </Pressable>
-          <Pressable onPress={() => {setUpComingEventsTypeEndedOrNotStarted('notStarted');setUpComingEventsModalVisible(!upComingEventsModalVisible)}} style={{ borderWidth: 0, backgroundColor: '#fff', alignSelf: 'flex-end', borderRadius: 6, elevation: 5, marginTop: 5, marginBottom: 5, padding: 3, marginHorizontal: 1 }}>
-            <View style={{ flexDirection: 'row', borderWidth: 0, justifyContent: 'flex-end' }}>
-              <MaterialCommunityIcons name="calendar-clock" size={18} style={{ marginTop: 4, marginHorizontal: 3 }} color="#737380" />
-              <Text style={{ fontSize: 14, lineHeight: 24, color: '#737380', fontWeight: 'bold', paddingRight: 6, alignSelf: 'flex-end' }}> 
-              Upcoming Events
-              </Text>
-            </View>
-          </Pressable>
+        <View style={{ flexDirection: 'row', borderWidth: 0, justifyContent: 'space-around', paddingHorizontal: 0, width:'100%' }}>
+          <View style={{ flexDirection: 'row', borderWidth: 0, justifyContent: 'flex-start', width:150 }}>
+            <Pressable onPress={() => {setUpComingEventsTypeEndedOrNotStarted('ended');setUpComingEventsModalVisible(!upComingEventsModalVisible)}} 
+            style={{ borderWidth: 0, backgroundColor: '#fff', alignSelf: 'flex-end', borderRadius: 6, elevation: 5, marginTop: 5, marginBottom: 5, padding: 3, marginHorizontal: 7 }}>
+              <View style={{ flexDirection: 'row', justifyContent: 'space-between' ,borderWidth: 0, width:115}}>
+                <MaterialCommunityIcons name="calendar-check" size={18} style={{ marginTop: 4, marginLeft: 8 }} color="#737380" />
+                <View style={{width:90, borderWidth:0, flexDirection: 'row', justifyContent:'center'}}>
+                  <Text style={{ fontSize: 14, lineHeight: 24, color: '#737380', fontWeight: 'bold', paddingHorizontal: 8, alignSelf: 'flex-end' }}> 
+                  Ended
+                  </Text>
+                </View>
+              </View>
+            </Pressable>
+          </View>
+          <View style={{ flexDirection: 'row', borderWidth: 0, justifyContent: 'flex-end', width:150 }}>
+            <Pressable onPress={() => {setUpComingEventsTypeEndedOrNotStarted('notStarted');setUpComingEventsModalVisible(!upComingEventsModalVisible)}} 
+            style={{ borderWidth: 0, backgroundColor: '#fff', alignSelf: 'flex-end', borderRadius: 6, elevation: 5, marginTop: 5, marginBottom: 5, padding: 3, marginHorizontal: 7 }}>
+              <View style={{ flexDirection: 'row', justifyContent: 'space-between', borderWidth: 0, width:115}}>
+                <View style={{width:90, borderWidth:0, flexDirection: 'row', justifyContent:'center'}}>
+                  <Text style={{ fontSize: 14, lineHeight: 24, color: '#737380', fontWeight: 'bold', paddingHorizontal: 8, alignSelf: 'flex-end' }}> 
+                  Upcoming
+                  </Text>
+                </View>
+                <MaterialCommunityIcons name="calendar-clock" size={18} style={{ marginTop: 4, marginRight: 8 }} color="#737380" />
+              </View>
+            </Pressable>
+          </View>
         </View>
         {/*
           :
@@ -473,20 +483,22 @@ export default function App() {
         </View>
       </View>
       <View style={{ paddingHorizontal: 5, }}>
-        <Text style={styles.title}>Welcome!</Text>
-        <Text style={styles.description}>Choose one event of the list above to see more details and live stats.</Text>
+        <Text style={styles.title}>Welcome!<AutoReloadEvents /></Text>
+        <Text style={styles.description}>Choose one event from the list below to see more details and live stats.</Text>
       </View>
       <StatusBar style="auto" />
       <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '100%', borderWidth: 0, marginVertical: 5 }}>
-        <Pressable onPress={() => loadLiveEvents(true)} style={{ marginLeft: 13, borderWidth: 0, backgroundColor: 'transparent', alignSelf: 'flex-end', borderRadius: 6, elevation: 0, marginTop: 5, marginBottom: 10 }}>
-          <View style={{ flexDirection: 'row', borderWidth: 0, justifyContent: 'flex-end' }}>
+        {/* this is the refresh home screen button, removed. It is placed besides 'Welcome!' text
+        <Pressable onPress={() => loadLiveEvents(true)} style={{ marginLeft: 0, borderWidth: 1, backgroundColor: 'transparent', alignSelf: 'flex-end', borderRadius: 6, elevation: 0, marginTop: 5, marginBottom: 10 }}>
+          <View style={{ flexDirection: 'row', borderWidth: 0, justifyContent: 'flex-end' }}>       
             <MaterialCommunityIcons name="refresh" size={23} style={{ marginTop: 4, marginHorizontal: 4 }} color="#737380" />
-            <Text style={{ fontSize: 14, lineHeight: 24, color: '#737380', fontWeight: 'bold', paddingRight: 10, alignSelf: 'flex-end' }}><AutoReloadEvents /></Text>
+            <Text style={{ fontSize: 14, lineHeight: 24, color: '#737380', fontWeight: 'bold', paddingRight: 10, alignSelf: 'flex-end' }}>
+            <AutoReloadEvents />
+            </Text>
           </View>
         </Pressable>
+      */}
         <UpcomingEventsModal />
-        {/*
-        */}
       </View>
 
       {

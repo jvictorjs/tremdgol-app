@@ -12,13 +12,14 @@ export default StyleSheet.create({
         flex: 1,
         flexGrow: 0,
         marginTop: Constants.statusBarHeight - 8,
-        padding: 15,
+        padding: 0,
+        paddingVertical:15,
         alignSelf: 'flex-end',
         backgroundColor: "#FCFCFC",
         borderRadius: 20,
         alignItems: "center",
         elevation: 30,
-        flexBasis: 290,
+        flexBasis: 274,
         width: '70%'
     },
 });
