@@ -1,6 +1,6 @@
 # tremdgol-app
 
-Mobile app with live soccer games statistics avaible on Android. Backend data comes from [tremdgol-backend](https://github.com/jvictorjs/tremdgol-backend) project.
+Live soccer matches statistics mobile app for Android. Backend data comes from [tremdgol-backend](https://github.com/jvictorjs/tremdgol-backend) project.
 
 ### Language
 
