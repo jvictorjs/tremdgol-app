@@ -12,7 +12,7 @@ English
 - [React Native](https://reactnative.dev/)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Expo](https://expo.dev/)
-- [eact-native-svg-charts](https://www.npmjs.com/package/react-native-svg-charts)
+- [React-native-svg-charts](https://www.npmjs.com/package/react-native-svg-charts)
 
 ## It is on the Google Play Store!
 
